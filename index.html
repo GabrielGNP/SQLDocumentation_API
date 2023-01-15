@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLDocumentation</title>
+    <link href="Styles/StylesIndex.css" rel="stylesheet"/>
+    <script src="Js/functions.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div id="ContainerLogo" style="text-align: center; margin-left: 2%;">
+            <div id="Logo"><img src="Imgs/SQLv2.png" alt="Java" style="height:100px"></div>
+            <div id="Title"> SQL Documentation</div>
+        </div>
+
+        
+        <div id="Seeker">
+            <button class="butAdd" id="AddClause" onclick="location.href='createNewClauseDocs.html'">+</button>
+            <input type="text" name="" id="Searching">
+            <button id="Search" onclick="console.log('funciona');">Search</button>
+            
+        </div>
+        
+    </header>
+    <div style=" display: flex; height: 100vh;">
+        <div id="Aside">
+            
+            <div>Cargando información...</div>
+ 
+        </div>
+        <div style="width:1px; height:100%; background:#cdcdcd; margin-left: 2%;"></div>
+        <main id="main">
+            <h1 style="text-align: center;">Tipos de datos</h1>
+            <nav style="display: flex; justify-content: space-around;">
+                <div id="Description">Descripcion</div>
+                <div>Tipos</div>
+                <div id="Example">Ejemplos</div>
+            </nav>
+            <section id="DescriptionText" >
+                <pre>
+                    SELECT Se usa para obtener una relación de los atributos deseados en el resultado de una consulta
+                </pre>
+            
+            </section>
+            <section id="ExampleText"></section>
+        </main>
+    </div>
+    
+    <footer style="height: 50px;
+    margin-top: 3%;">
+        Personal SQL Dodumentation
+
+    </footer>
+   
+</body>
+</html>

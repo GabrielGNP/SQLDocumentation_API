@@ -1,0 +1,176 @@
+*{
+    background-color: var(--ColorBaseDark);
+    font-family: sans-serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: var(--ColorTextDark);
+}
+
+
+
+/*|_________________________________*/
+
+:root{
+    --ColorBase: #eae6e2;
+    --Colorselect: #f0f0f0;
+    --ShadowColor: #d7cfca;
+    --ColorText: #5a5a5a;
+    --TextLink: #3f96f3;;
+
+    --ColorBaseDark: #1b1b1b;
+    --ColorselectDark: #343434;
+    --ShadowColorDark: #858585;
+    --ColorTextDark: #cdcdcd;
+}
+
+.header{
+    /*background-color: red;*/
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    
+    padding-bottom: 2%;
+    border-bottom: 2px solid;
+}
+#Title{
+    font-family: sans-serif,'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 800;
+}
+
+
+
+#main{
+    margin-left: 20px;
+    width: 100%;
+   /* background: #674d80;*/
+    margin-right: 20px;
+    margin-top: 3%;
+    height: fit-content;
+}
+
+
+.inputTitle{
+    background:inherit;
+    border: 0px;
+    border-bottom: 1px solid var(--ShadowColorDark);
+    font-size:30px;
+    text-align: center;
+    outline: none;
+}
+/*.inputTitle:focus{
+    border: none;
+}.inputTitle:active{
+    border: none;
+}*/
+
+.textarea{
+    width: 100%; 
+    margin-top: 10px;
+    outline: none;
+}
+
+.butAdd{
+    background-color: var(--TextLink);
+    border: 0px;
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+    padding: 0px;
+    margin-right: 20px;
+    font-family: monospace;
+    font-size: 25px;
+} 
+
+.butAdd::before{
+    background-color: var(#082164);
+}
+
+.saveButon{
+    background-color: var(--TextLink);
+    border: 0px;
+    height: 30px;
+    width: 117px;
+    border-radius: 15px;
+    padding: 0px;
+    font-size: 20px;
+    margin-top: 20px;
+}
+.saveButon::before{
+    background-color: var(#082164); 
+}
+
+.butCloseExample{
+    background: #a10000;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border: 1px solid black;
+}
+
+.colorButs{
+    width: 17px;
+    height: 17px;
+    margin: 0.5%;
+    margin-top: 2%;
+    
+}
+
+red{
+    color: #b90000;
+}
+orange{
+    color: #d45d03;
+}
+yellow{
+    color: #f0d503;
+}
+green{
+    color: #66d317
+}
+cyan{
+    color: #00b9b6;
+}
+blue{
+    color: #0056b9;
+}
+purple{
+    color: #7e00b9;
+}
+
+
+/*|  Modificaciones del scrollbar*/
+/*|*/*::-webkit-scrollbar{
+/*|*/    -webkit-appearance: none;
+/*|*/    background: #141619;
+/*|*/}
+/*|*/*::-webkit-scrollbar:vertical {
+/*|*/    width:10px;
+/*|*/}
+/*|*/*::-webkit-scrollbar-button:increment,*::-webkit-scrollbar-button {
+/*|*/   display: none;
+/*|*/    background-color: rgb(34, 34, 34);
+/*|*/    /*border: 2px solid rgb(152 108 32);*/
+/*|*/} 
+/*|*/
+/*|*/*::-webkit-scrollbar:horizontal {
+/*|*/    height: 10px;
+/*|*/}
+/*|*/
+/*|*/*::-webkit-scrollbar-thumb {
+/*|*/    background-color: rgb(75 75 75);
+/*|*/    /*border-radius: 20px;*/
+/*|*/    /*border: 2px solid #2c2c2c;*/
+/*|*/    border: 2px solid rgb(75 75 75);
+/*|*/    border-radius: 4px;
+/*|*/}
+/*|*/
+/*|*/*::-webkit-scrollbar-track {
+/*|*/    border-radius: 10px;  
+/*|*/}
+/*|*/*::-webkit-scrollbar-corner {
+/*|*/     background-color: rgb(34, 34, 34);
+/*|*/     border: 2px solid #2c2c2c;
+/*|*/}

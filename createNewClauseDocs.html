@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQLDocumentation</title>
+    <link href="Styles/StylesCreateNewClauseDocs.css" rel="stylesheet"/>
+    <script src="Js/functionsAddClause.js"></script>
+
+</head>
+<body>
+    <header class="header">
+        <div id="ContainerLogo" style="text-align: center; margin-left: 2%;">
+            <div id="Logo"><img src="Imgs/SQLv2.png" alt="Java" style="height:100px"></div>
+            <div id="Title"> SQL Documentation</div>
+        </div>
+
+        <button class="butAdd" id="AddClause" onclick="location.href='index.html'">←</button>
+      
+        
+    </header>
+    <div style=" display: flex; height: 100vh;">
+        <main id="main">
+                <div style="width: 100%;text-align: center;">
+                    <input class="inputTitle" id="titleInput" type="text" placeholder="Ingresar título" value="" onblur="document.getElementById('titleInput').style.border = ''">
+                </div>
+                <div style="display: flex;">
+                    <div style="display: grid; width: 80%;" id="contTextAreas">
+                        <div style="margin-top: 20px;">Descripción:</div>
+                        <textarea name="description" id="descriptionText" class="textarea" cols="30" rows="10" onkeyup="generateTextDes()" onkeydown="generateTextDes()"></textarea>
+                        <div id="textGeneratedDes"></div>
+                        <div style="margin-top: 20px;" id="titleExample">Ejemplo:</div>
+                        <textarea name="example" id="exampleText0" class="textarea" cols="30" rows="10" onkeyup="generateTextExa()" onkeydown="generateTextExa()"></textarea>
+                        <div id="textGeneratedExa"></div>
+                        <!--<textarea name="example" id="exampleText1" class="textarea" cols="30" rows="10"></textarea><button id="closeExampleBut1" class="butCloseExample" onclick="closeExample('closeExampleBut1', 'exampleText1')">X</button>-->
+                    </div>   
+                    <div style="width: 15%; background: inherit; margin-left: 2%;">
+                    <!--<button onclick="addExample();"> addEjemplo</button>-->
+                    <br><br>
+                    <br>cambiar color de texto de Descripcion<br>
+                    <div style="height: 35%;">
+                        <button class="colorButs" style="background: var(--ColorTextDark)" onclick="setColorDescription(0)" onfocus="this.blur(); document.getElementById('descriptionText').focus();"></button>
+                        <button class="colorButs" style="background: #b90000" onclick="setColorDescription(1)" onfocus="this.blur(); document.getElementById('descriptionText').focus();"></button>
+                        <button class="colorButs" style="background: #d45d03" onclick="setColorDescription(2)" onfocus="this.blur(); document.getElementById('descriptionText').focus();"></button>
+                        <button class="colorButs" style="background: #f0d503" onclick="setColorDescription(3)" onfocus="this.blur(); document.getElementById('descriptionText').focus();"></button>
+                        <button class="colorButs" style="background: #66d317" onclick="setColorDescription(4)" onfocus="this.blur(); document.getElementById('descriptionText').focus();"></button>
+                        <button class="colorButs" style="background: #00b9b6" onclick="setColorDescription(5)" onfocus="this.blur(); document.getElementById('descriptionText').focus();"></button>
+                        <button class="colorButs" style="background: #0056b9" onclick="setColorDescription(6)" onfocus="this.blur(); document.getElementById('descriptionText').focus();"></button>
+                        <button class="colorButs" style="background: #7e00b9" onclick="setColorDescription(7)" onfocus="this.blur(); document.getElementById('descriptionText').focus();"></button>
+                    </div>
+                    <br>cambiar color de texto de Ejemplo<br>
+                    <div style="height: 50%;">
+                        <button class="colorButs" style="background: var(--ColorTextDark)" onclick="setColorExample(0)" onfocus="this.blur(); document.getElementById('exampleText0').focus();"></button>
+                        <button class="colorButs" style="background: #b90000" onclick="setColorExample(1)" onfocus="this.blur(); document.getElementById('exampleText0').focus();"></button>
+                        <button class="colorButs" style="background: #d45d03" onclick="setColorExample(2)" onfocus="this.blur(); document.getElementById('exampleText0').focus();"></button>
+                        <button class="colorButs" style="background: #f0d503" onclick="setColorExample(3)" onfocus="this.blur(); document.getElementById('exampleText0').focus();"></button>
+                        <button class="colorButs" style="background: #66d317" onclick="setColorExample(4)" onfocus="this.blur(); document.getElementById('exampleText0').focus();"></button>
+                        <button class="colorButs" style="background: #00b9b6" onclick="setColorExample(5)" onfocus="this.blur(); document.getElementById('exampleText0').focus();"></button>
+                        <button class="colorButs" style="background: #0056b9" onclick="setColorExample(6)" onfocus="this.blur(); document.getElementById('exampleText0').focus();"></button>
+                        <button class="colorButs" style="background: #7e00b9" onclick="setColorExample(7)" onfocus="this.blur(); document.getElementById('exampleText0').focus();"></button>
+                    </div>
+                    </div>
+                </div>
+                     
+                <button class="saveButon" onclick="addClause();">guardar</button>  
+        </main>
+    </div>
+    
+ 
+</body>
+</html>
