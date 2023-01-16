@@ -10,6 +10,37 @@
 
 </head>
 <body>
+
+    <!--<div id="dataEmpty" class="messageInformation">
+        <div id="Content"style="position: absolute; width: 50%; height: 25%; left: 25%; top: 30%;">
+            <div id="info" style="margin: 5%;">
+                ¿Desea dejar los campos amarillos sin datos? <br><br>
+            </div>
+            <div style="display: flex;
+            width: 100%;
+            
+            justify-content: space-evenly;">
+                <button style="    background-color: var(--TextLink);
+                border: 0px;
+                width: 15%;
+                border-radius: 5px;
+                height: 35px;
+                box-shadow: 3px 3px 1px #094bb7;
+                font-size: 15px;
+                font-weight: bold;" onclick="saveClause()">Si</button>
+                <button style="background-color: #0756ac;
+                border: 0px;
+                width: 15%;
+                border-radius: 5px;
+                height: 35px;
+                box-shadow: 3px 3px 1px #02193e;
+                font-size: 15px;
+                font-weight: bold;" onclick="CloseMessage(`dataEmpty`);">No</button>
+            </div>
+            
+        </div>
+    </div>-->
+
     <header class="header">
         <div id="ContainerLogo" style="text-align: center; margin-left: 2%;">
             <div id="Logo"><img src="Imgs/SQLv2.png" alt="Java" style="height:100px"></div>
@@ -23,15 +54,15 @@
     <div style=" display: flex; height: 100vh;">
         <main id="main">
                 <div style="width: 100%;text-align: center;">
-                    <input class="inputTitle" id="titleInput" type="text" placeholder="Ingresar título" value="" onblur="document.getElementById('titleInput').style.border = ''">
+                    <input class="inputTitle" id="titleInput" type="text" placeholder="Ingresar título" value="" onblur="document.getElementById('titleInput').style.border = '';document.getElementById('titleInput').style.background = '';">
                 </div>
                 <div style="display: flex;">
                     <div style="display: grid; width: 80%;" id="contTextAreas">
                         <div style="margin-top: 20px;">Descripción:</div>
-                        <textarea name="description" id="descriptionText" class="textarea" cols="30" rows="10" onkeyup="generateTextDes()" onkeydown="generateTextDes()"></textarea>
+                        <textarea name="description" id="descriptionText" class="textarea" cols="30" rows="10" onclick="StyleDefault(this.id)" onkeyup="generateTextDes()" onkeydown="generateTextDes()"></textarea>
                         <div id="textGeneratedDes"></div>
                         <div style="margin-top: 20px;" id="titleExample">Ejemplo:</div>
-                        <textarea name="example" id="exampleText0" class="textarea" cols="30" rows="10" onkeyup="generateTextExa()" onkeydown="generateTextExa()"></textarea>
+                        <textarea name="example" id="exampleText0" class="textarea" cols="30" rows="10" onclick="StyleDefault(this.id)" onkeyup="generateTextExa()" onkeydown="generateTextExa()"></textarea>
                         <div id="textGeneratedExa"></div>
                         <!--<textarea name="example" id="exampleText1" class="textarea" cols="30" rows="10"></textarea><button id="closeExampleBut1" class="butCloseExample" onclick="closeExample('closeExampleBut1', 'exampleText1')">X</button>-->
                     </div>   

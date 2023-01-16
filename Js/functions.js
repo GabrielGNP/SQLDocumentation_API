@@ -1,21 +1,46 @@
-fetch("http://localhost:8090/sqlAPI/allClauses")
-.then(
-    response => response.json()
-)
-.then(data => {
-    //console.log(data)
-    let newAside = "";
-    let catButsInAside = 0;
-    data.forEach(element => {
-        newAside = newAside + " <label class='ButAside' id='But"+catButsInAside+"Aside' onclick='ChangeCheckAside("+catButsInAside+")'>"
-        +"<input type='radio' id='CheckAside"+catButsInAside+"' name='opAside' value='"+element+"'>" 
-        +"<div>"+element+"</div>"
-    +"</label>"
-    catButsInAside++;
-    });
-    console.log(newAside);
-    document.getElementById("Aside").innerHTML= newAside;
-})
+
+
+document.addEventListener("load", loadInfo(), false);
+
+function loadInfo(){
+   
+        fetch("http://localhost:8090/sqlAPI/allClauses")
+        .then(
+            response => response.json()
+        )
+        .then(data => {
+            //console.log(data)
+            let newAside = "";
+            let catButsInAside = 0;
+            data.forEach(element => {
+                newAside = newAside + " <label class='ButAside' id='But"+catButsInAside+"Aside' onclick='ChangeCheckAside("+catButsInAside+")'>"
+                +"<input type='radio' id='CheckAside"+catButsInAside+"' name='opAside' value='"+element+"'>" 
+                +"<div>"+element+"</div>"
+            +"</label>"
+            catButsInAside++;
+            });
+            console.log(newAside);
+            document.getElementById("Aside").innerHTML= newAside;
+        }).catch((error) => {
+            document.getElementById("Aside").innerHTML= "datos no cargados";
+            console.error("Imposible la carga de datos. Error: ->"+error);
+            mesError= document.createElement("div");
+            mesError.id ="noConnected";
+            mesError.className = "messageError";
+            mesError.innerHTML = '<div id="Content"style="position: absolute; width: 50%; height: 25%; left: 25%; top: 30%;">'+
+                                    '<button id="CloseMessage" class="butAdd" style="position: absolute; right: 0px; margin: 5px; font-size: 20px; border-radius: 5px; width: 20px; height: 20px; padding: 0px;" onclick="CloseMessage(`noConnected`)">x</button>'+
+                                    '<div id="info" style="margin: 5%;">'+
+                                        "No se ha podido cargar los datos. Verifique la coneccion con el servidor. <br><br>"+
+                                        "Vuelva a cargar la página para reintentar cargar los datos. <br><br>"+
+                                        "<div style='background: #3a0000db;color: #d81d1d;'>"+
+                                        "ERROR: \n"+ 
+                                        error+ "</div>"+
+                                    '</div>'+
+                                '</div>';
+            document.body.appendChild(mesError);
+        });
+  
+}
 
 function ChangeCheckAside(id){
     let elementoActivo = document.querySelector('input[name="opAside"]:checked');
@@ -59,4 +84,8 @@ function ChangeCheckAside(id){
     }
 
     
+}
+
+function CloseMessage(phaterId){
+    document.body.removeChild(document.getElementById(phaterId));
 }

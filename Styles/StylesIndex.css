@@ -126,24 +126,44 @@
 
 red{
     color: #b90000;
+    font-weight: bold;
 }
 orange{
     color: #d45d03;
+    font-weight: bold;
 }
 yellow{
     color: #f0d503;
+    font-weight: bold;
 }
 green{
-    color: #66d317
+    color: #66d317;
+    font-weight: bold;
 }
 cyan{
     color: #00b9b6;
+    font-weight: bold;
 }
 blue{
-    color: #0056b9;
+    color: #006ae4;
+    font-weight: bold;
+    font-weight: bold;
 }
 purple{
     color: #7e00b9;
+    font-weight: bold;
+}
+
+.messageError{
+    background: #000000d6;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    margin: 0px;
+    padding: 0px;
+    left: 0px;
+    top: 0px;
 }
 
 /*|  Modificaciones del scrollbar*/
