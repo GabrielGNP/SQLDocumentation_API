@@ -53,7 +53,7 @@ function saveClause(){
     let textExample = textAreaExample.replaceAll("\n", "<br>");
 
     titleCompose = "<h1 style='text-align: center;'>" + textTitle + "</h1>";
-    descriptionExampleCompose = "<h3>Descripción</h3><section id='DescriptionText'>" + textDescription + "</section><br><br>" +"<h3>Ejemplo</h3><section id='ExampleText' style='border: 1px solid grey;'>" + textExample + "</section>"
+    descriptionExampleCompose = "<h3>Descripción</h3><section id='DescriptionText'>" + textDescription + "</section><br><br>" +"<h3>Ejemplo</h3><section id='ExampleText' style='border-top: 1px solid grey; padding-top: 10px;'>" + textExample + "</section>"
 
 
     let textCompose = titleCompose + descriptionExampleCompose;
@@ -176,7 +176,7 @@ function setColorExample(newColor){
 
 function generateTextExa(){
     StyleDefault("exampleText0");
-    document.getElementById("textGeneratedExa").innerHTML = document.getElementById("exampleText0").value;
+    document.getElementById("textGeneratedExa").innerHTML = document.getElementById("exampleText0").value.replaceAll("\n", "<br>");
     
 }
 

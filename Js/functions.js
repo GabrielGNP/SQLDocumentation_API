@@ -74,7 +74,7 @@ function ChangeCheckAside(id){
                                     data.definition+
                                 "</div>"+
                             "</section>"+
-                            "<section id='ExampleText'></section>";
+                            "<section id='ExampleText' style='border-top: 1px solid grey; padding-top: 10px;'></section>";
 
                 //document.getElementById("main").innerHTML = newMain;
                 document.getElementById("main").innerHTML = data.definition;
